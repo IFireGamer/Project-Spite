@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/FightWorld/testFightScenes/Square Fight.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/testOverworld/testOverWorld.unity
+    guid: 9655863376302154daca14099bdacfa7
+  - enabled: 1
+    path: Assets/FightWorld/testFightScenes/Hexagon Fight.unity
+    guid: 8c38f33643451a2429bf7d97acc51226
+  - enabled: 1
+    path: Assets/FightWorld/testFightScenes/Circle Fight.unity
+    guid: 751ec2ee66a41b04499133997a21b61c
+  - enabled: 1
+    path: Assets/FightWorld/testFightScenes/Three Fight.unity
+    guid: 8ad58ac8275abbf4da219ec413c0447b
+  m_configObjects: {}
