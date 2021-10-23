@@ -26,8 +26,10 @@ public class Player : MonoBehaviour
         }
         if ((jump > 0)&&grounded)
         {
-            rigid.AddForce(new Vector2(0, jumpForce));
+            rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             grounded = false;
+            this.GetComponent<Animator>().ResetTrigger("Grounded");
+            this.GetComponent<Animator>().SetTrigger("Jump");
         }
     }
     private void Update()
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour
         bool fire = Input.GetKeyDown(KeyCode.Return);
         if (fire)
         {
-            Instantiate(bulletObject, new Vector3(this.transform.position.x, this.transform.position.y), transform.rotation * Quaternion.Euler(0f, 0f, 90f));
+            Instantiate(bulletObject, new Vector3(this.transform.position.x, this.transform.position.y), transform.rotation * Quaternion.Euler(0f, 0f, 0f));
         }
         
         

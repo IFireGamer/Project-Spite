@@ -15,6 +15,7 @@ public class groundScript : MonoBehaviour
         if (collision.CompareTag("Ground"))
         {
             player.grounded = true;
+            player.GetComponent<Animator>().SetTrigger("Grounded");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
