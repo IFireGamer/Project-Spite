@@ -18,13 +18,13 @@ public class Player : MonoBehaviour
     {
         Rigidbody2D rigid = this.GetComponent<Rigidbody2D>();
         float xValue = Input.GetAxis("Horizontal") * speed;
-        float jump = Input.GetAxis("Vertical");
+        bool jump = Input.GetKey(KeyCode.W);
         
         if (xValue != 0)
         {
             rigid.AddForce(new Vector2(xValue, 0));
         }
-        if ((jump > 0)&&grounded)
+        if (jump &&grounded)
         {
             rigid.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             grounded = false;
